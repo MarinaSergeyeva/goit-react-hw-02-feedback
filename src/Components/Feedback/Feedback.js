@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styles from "./Feedback.module.css";
+import PropTypes from "prop-types";
 
 class Feedback extends Component {
   render() {
@@ -24,3 +25,7 @@ class Feedback extends Component {
 }
 
 export default Feedback;
+
+Feedback.propTypes = {
+  onLeaveFeedback: PropTypes.func,
+};

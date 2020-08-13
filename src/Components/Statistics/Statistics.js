@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styles from "./Statistics.module.css";
+import PropTypes from "prop-types";
 
 class Statistics extends Component {
   render() {
@@ -20,17 +21,17 @@ class Statistics extends Component {
             </li>
             <li>
               <p className={styles.statisticsItem}>
-                Neutral: <span> {neutral}</span>
+                Neutral: <span>{neutral}</span>
               </p>
             </li>
             <li>
               <p className={styles.statisticsItem}>
-                Bad: <span>{bad} </span>
+                Bad: <span>{bad}</span>
               </p>
             </li>
             <li>
               <p className={styles.statisticsItem}>
-                Total: <span>{total} </span>
+                Total: <span>{total}</span>
               </p>
             </li>
             <li>
@@ -49,3 +50,11 @@ class Statistics extends Component {
 }
 
 export default Statistics;
+
+Statistics.propTypes = {
+  good: PropTypes.number,
+  bad: PropTypes.number,
+  neutral: PropTypes.number,
+  total: PropTypes.number,
+  positivePercentage: PropTypes.number,
+};
