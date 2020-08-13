@@ -4,14 +4,21 @@ import Statistics from "../Statistics/Statistics";
 
 class Section extends Component {
   render() {
-    const { good, bad, neutral } = this.props;
+    const { good, bad, neutral, onLeaveFeedback } = this.props;
     const total = good + bad + neutral;
-    const positivePercentage = (good * 100) / total;
+    const positivePercentageStart = (good * 100) / total;
+    const positivePercentage = positivePercentageStart.toFixed(2);
 
     return (
       <>
-        <Feedback onLeaveFeedback={} />
-        <Statistics good={good} neutral={neutral} bad={bad} total={total} positivePercentage={positivePercentage} />
+        <Feedback onLeaveFeedback={onLeaveFeedback} />
+        <Statistics
+          good={good}
+          neutral={neutral}
+          bad={bad}
+          total={total}
+          positivePercentage={positivePercentage}
+        />
       </>
     );
   }

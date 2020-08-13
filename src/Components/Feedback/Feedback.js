@@ -3,17 +3,19 @@ import styles from "./Feedback.module.css";
 
 class Feedback extends Component {
   render() {
+    const { onLeaveFeedback } = this.props;
+
     return (
       <>
         <p className={styles.feedbackTitle}>Please leave feedback</p>
 
-        <button type="button" name="good">
+        <button type="button" name="good" onClick={onLeaveFeedback}>
           Good
         </button>
-        <button type="button" name="neutral">
+        <button type="button" name="neutral" onClick={onLeaveFeedback}>
           Neutral
         </button>
-        <button type="button" name="bad">
+        <button type="button" name="bad" onClick={onLeaveFeedback}>
           Bad
         </button>
       </>

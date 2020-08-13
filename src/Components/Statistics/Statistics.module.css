@@ -6,3 +6,13 @@
 .statisticsList {
   font-size: 20px;
 }
+
+.statisticsListItem {
+  font-size: 18px;
+}
+
+.statisticsItem {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
