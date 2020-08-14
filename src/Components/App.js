@@ -8,8 +8,8 @@ class App extends Component {
     bad: 0,
   };
 
-  onLeaveFeedback = (e) => {
-    const name = e.target.name;
+  onLeaveFeedback = (name) => {
+    // const name = e.target.name;
     this.setState((prevState) => ({ [name]: prevState[name] + 1 }));
   };
 

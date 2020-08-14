@@ -10,13 +10,21 @@ class Feedback extends Component {
       <>
         <p className={styles.feedbackTitle}>Please leave feedback</p>
 
-        <button type="button" name="good" onClick={onLeaveFeedback}>
+        <button
+          type="button"
+          name="good"
+          onClick={() => onLeaveFeedback("good")}
+        >
           Good
         </button>
-        <button type="button" name="neutral" onClick={onLeaveFeedback}>
+        <button
+          type="button"
+          name="neutral"
+          onClick={() => onLeaveFeedback("neutral")}
+        >
           Neutral
         </button>
-        <button type="button" name="bad" onClick={onLeaveFeedback}>
+        <button type="button" name="bad" onClick={() => onLeaveFeedback("bad")}>
           Bad
         </button>
       </>
